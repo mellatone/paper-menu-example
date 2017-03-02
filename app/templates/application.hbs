@@ -1,5 +1,30 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#paper-menu as |menu|}}
+  {{#menu.trigger}}
+    {{#paper-button iconButton=true}}
+      {{paper-icon "local_phone"}}
+    {{/paper-button}}
+  {{/menu.trigger}}
+  {{#menu.content width=4 as |content|}}
 
-{{outlet}}
+    {{#content.menu-item onClick=(action (mut noop))}}
+      {{paper-icon "adb"}}
+      <span>This is enabled.</span>
+    {{/content.menu-item}}
+
+    {{#content.menu-item onClick=(action (mut noop))}}
+      {{paper-icon "adb"}}
+      <span>This is enabled.</span>
+    {{/content.menu-item}}
+
+    {{#content.menu-item onClick=(action (mut noop))}}
+      {{paper-icon "adb"}}
+      <span>This is enabled.</span>
+    {{/content.menu-item}}
+
+    {{#content.menu-item onClick=(action (mut noop))}}
+      {{paper-icon "adb"}}
+      <span>This is enabled.</span>
+    {{/content.menu-item}}
+
+  {{/menu.content}}
+{{/paper-menu}}
